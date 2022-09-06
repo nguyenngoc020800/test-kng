@@ -42,7 +42,7 @@
                 <tbody>
                     <tr v-for="user in this.userListFilter">
                         <th scope="row">{{user.id}}</th>
-                        <td>{{user.firstName}} {{user.last}}</td>
+                        <td>{{user.firstName}} {{user.lastName}}</td>
                         <td>{{user.company}}</td>
                         <td class="d-flex justify-content-between align-items-center">
                             <button @click="userDetail = user" class="btn btn-outline-success">detail</button>
