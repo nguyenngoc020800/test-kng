@@ -371,19 +371,19 @@ export default {
             this.validation10()
             this.validation11()
 
-            //hàm khi validation hợp lệ
-            // if( this.validation1() &&
-            // this.validation2()&&
-            // this.validation3()&&
-            // this.validation4()&&
-            // this.validation5()&&
-            // this.validation6()&&
-            // this.validation7()&&
-            // this.validation8()&&
-            // this.validation9()&&
-            // this.validation10()&&
-            //     this.validation11()) {
-            this.addToList(this.$data.form)
+            // hàm khi validation hợp lệ
+            if( this.validation1() &&
+            this.validation2()&&
+            this.validation3()&&
+            this.validation4()&&
+            this.validation5()&&
+            this.validation6()&&
+            this.validation7()&&
+            this.validation8()&&
+            this.validation9()&&
+            this.validation10()&&
+            this.validation11()) {
+                this.addToList(this.$data.form)
                 this.form = {
                     firstName: "",
                     lastName: "",
@@ -411,7 +411,7 @@ export default {
                     donate:0
                 }
                 this.notification = true
-            // }
+            }
             //hàm khi validation hợp lệ
         },
         // sự kiện reset form 
