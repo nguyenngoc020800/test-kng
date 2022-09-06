@@ -76,6 +76,13 @@
             
         }
     },
+    watch: {
+        userListFilter(newuser, olduser) {
+            if (newuser.length !== olduser.length) {
+                console.log(newuser)
+            }
+        }   
+    },
     methods: {
         // sự kiện lọc theo tên khi nhập vào input 
         filterByInput() {
@@ -94,7 +101,8 @@
         // xóa user
         deleteUserAction(id) {
             this.deleteUser(id);
-            this.notification=true
+            this.notification = true
+            this.filterByInput()
         },
         // chuyển sang trang update
         setUserUpdate(user) {

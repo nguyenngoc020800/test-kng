@@ -16,10 +16,12 @@ export const useFormStore = defineStore("form", {
       localStorage.setItem("userList", JSON.stringify(this.userList));
     },
     deleteUser(id) {
-      this.userList.splice(id, 1);
-      this.userList = this.userList.map((user, index) => {
+      const list = [...this.userList];
+      list.splice(id, 1);
+      const list2 = list.map((user, index) => {
         return { ...user, id: index };
       });
+      this.userList = list2;
       localStorage.setItem("userList", JSON.stringify(this.userList));
     },
     setUserUpdateAction(user) {

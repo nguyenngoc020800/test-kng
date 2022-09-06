@@ -122,7 +122,7 @@
 
                     <span v-if="error.donate" class="invalid-feedback">{{error.donate}}</span>
                     <!-- el giả hiển thị độ dài donate -->
-                    <span class="range" :style="rangeStyle">
+                    <span class="range" :style="rangeStyle" :key="form.donate">
                         <!-- ô hiển thị giá trị donate -->
                         <span class="donate-value" :class="{'error':error.donate}">{{form.donate}} $</span>
                         <!-- ô hiển thị giá trị donate -->    
@@ -372,17 +372,17 @@ export default {
             this.validation11()
 
             //hàm khi validation hợp lệ
-            if( this.validation1() &&
-            this.validation2()&&
-            this.validation3()&&
-            this.validation4()&&
-            this.validation5()&&
-            this.validation6()&&
-            this.validation7()&&
-            this.validation8()&&
-            this.validation9()&&
-            this.validation10()&&
-                this.validation11()) {
+            // if( this.validation1() &&
+            // this.validation2()&&
+            // this.validation3()&&
+            // this.validation4()&&
+            // this.validation5()&&
+            // this.validation6()&&
+            // this.validation7()&&
+            // this.validation8()&&
+            // this.validation9()&&
+            // this.validation10()&&
+            //     this.validation11()) {
             this.addToList(this.$data.form)
                 this.form = {
                     firstName: "",
@@ -411,7 +411,7 @@ export default {
                     donate:0
                 }
                 this.notification = true
-            }
+            // }
             //hàm khi validation hợp lệ
         },
         // sự kiện reset form 
