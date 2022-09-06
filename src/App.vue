@@ -1,31 +1,29 @@
 <script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://vuejs.org/api/sfc-script-setup.html#script-setup
-import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
+   <div>
+    <RouterView></RouterView>
+   </div>
 </template>
+<!--css cơ bản cho toàn bộ trang -->
+<style lang="css">
+  *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  html{
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+html >body{
+  font-family: 'Roboto', sans-serif;
+}
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+/* class quy định chiều dài trang */
+.w100v{
+  width: 100vw;
+  height: 100vh;
 }
 </style>
