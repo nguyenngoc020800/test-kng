@@ -170,6 +170,7 @@ export default {
                     cvn: "",
                     donate:0
                 },
+                // thông báo lỗi validation
                 // giá trị input
                 form: {
                     firstName: "",
